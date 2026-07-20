@@ -7,6 +7,8 @@
 *.zip
 *.tmp
 *.bak
+workflow/qa/installed-*.png
+workflow/qa/running-rows-installed.png
 __pycache__/
 *.py[cod]
 .DS_Store
@@ -18,4 +20,3 @@ Thumbs.db
 !.env.example
 *.key
 *.pem
-
