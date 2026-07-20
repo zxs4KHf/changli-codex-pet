@@ -1,0 +1,122 @@
+{
+  "ok": true,
+  "review_standard": "pragmatic-user-approved",
+  "directions": [
+    {
+      "direction": "000",
+      "expected": "up",
+      "observed": "eyes and chin lifted",
+      "verdict": "pass",
+      "reason": "clear upward gaze"
+    },
+    {
+      "direction": "022.5",
+      "expected": "up-right",
+      "observed": "upward gaze with slight screen-right turn",
+      "verdict": "pass",
+      "reason": "both axes visible"
+    },
+    {
+      "direction": "045",
+      "expected": "up-right",
+      "observed": "stronger screen-right head turn with upward eyes",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "067.5",
+      "expected": "up-right",
+      "observed": "near-profile screen-right with slight upward gaze",
+      "verdict": "warning",
+      "reason": "correct quadrant; turn from 045 is larger than neighboring steps"
+    },
+    {
+      "direction": "090",
+      "expected": "right",
+      "observed": "nose and pupils toward screen-right; ponytail trails screen-left",
+      "verdict": "pass",
+      "reason": "unmistakable cardinal"
+    },
+    {
+      "direction": "112.5",
+      "expected": "down-right",
+      "observed": "screen-right turn with lowered eyes",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "135",
+      "expected": "down-right",
+      "observed": "lowered head with remaining screen-right cue",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "157.5",
+      "expected": "down-right",
+      "observed": "mostly down with a small screen-right cue",
+      "verdict": "pass",
+      "reason": "one step before down"
+    },
+    {
+      "direction": "180",
+      "expected": "down",
+      "observed": "front-facing bowed head and lowered pupils",
+      "verdict": "pass",
+      "reason": "unmistakable cardinal"
+    },
+    {
+      "direction": "202.5",
+      "expected": "down-left",
+      "observed": "lowered eyes with slight screen-left turn",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "225",
+      "expected": "down-left",
+      "observed": "stronger screen-left turn while gaze remains low",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "247.5",
+      "expected": "down-left",
+      "observed": "near-profile screen-left with residual downward cue",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "270",
+      "expected": "left",
+      "observed": "nose and pupils toward screen-left; ponytail trails screen-right",
+      "verdict": "pass",
+      "reason": "unmistakable cardinal"
+    },
+    {
+      "direction": "292.5",
+      "expected": "up-left",
+      "observed": "screen-left turn with rising eyes",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "315",
+      "expected": "up-left",
+      "observed": "shallower screen-left turn with upward eyes",
+      "verdict": "pass",
+      "reason": "correct quadrant"
+    },
+    {
+      "direction": "337.5",
+      "expected": "up-left",
+      "observed": "near-front pose retaining a small screen-left and upward cue",
+      "verdict": "warning",
+      "reason": "correct quadrant; transition back to 000 has a larger visual difference"
+    }
+  ],
+  "accepted_warnings": [
+    "045 to 067.5 has a larger but readable head-turn step",
+    "337.5 to 000 has a larger but directionally correct loop closure"
+  ]
+}

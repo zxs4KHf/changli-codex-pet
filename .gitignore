@@ -1,0 +1,21 @@
+# Private/raw production materials and third-party source references
+/素材审批/
+/制作工作区/
+/ChatGPT Image *.png
+
+# Generated archives and temporary files
+*.zip
+*.tmp
+*.bak
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+

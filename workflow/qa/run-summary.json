@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "spriteVersionNumber": 2,
+  "acceptanceProfile": "pragmatic-user-approved",
+  "runDir": "<RUN_DIR>",
+  "spritesheet": "<RUN_DIR>/final/spritesheet-extended.webp",
+  "validation": "<RUN_DIR>/final/validation-extended.json",
+  "installedValidation": "<RUN_DIR>/final/validation-installed.json",
+  "chromaDespill": "<RUN_DIR>/qa/chroma-despill-extended.json",
+  "contactSheet": "<RUN_DIR>/qa/contact-sheet-extended.png",
+  "directionSheet": "<RUN_DIR>/qa/look-directions.png",
+  "directionSemantics": "<RUN_DIR>/qa/direction-semantics.json",
+  "continuity": "<RUN_DIR>/qa/look-continuity.json",
+  "review": "<RUN_DIR>/qa/review.json",
+  "package": "<CODEX_HOME>/pets/changli",
+  "acceptedWarnings": [
+    "045 to 067.5 uses a larger but readable head-turn step",
+    "337.5 to 000 uses a larger but directionally correct loop closure",
+    "independent three-reviewer blind direction vote was omitted under the user's pragmatic acceptance request"
+  ]
+}

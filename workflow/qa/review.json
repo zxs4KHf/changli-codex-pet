@@ -1,0 +1,973 @@
+{
+  "ok": true,
+  "frames_root": "<RUN_DIR>/frames",
+  "states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12983,
+          "bbox": [
+            36,
+            25,
+            156,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 165
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13156,
+          "bbox": [
+            36,
+            25,
+            156,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 170
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13027,
+          "bbox": [
+            36,
+            25,
+            156,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 175
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13031,
+          "bbox": [
+            36,
+            25,
+            156,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 171
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13069,
+          "bbox": [
+            36,
+            25,
+            156,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 168
+        },
+        {
+          "index": 5,
+          "file": "<RUN_DIR>/frames/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13064,
+          "bbox": [
+            36,
+            25,
+            156,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 196
+        }
+      ]
+    },
+    {
+      "state": "running-right",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/running-right/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10572,
+          "bbox": [
+            26,
+            33,
+            165,
+            174
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 438
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/running-right/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10255,
+          "bbox": [
+            26,
+            33,
+            165,
+            174
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 378
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/running-right/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10166,
+          "bbox": [
+            28,
+            34,
+            164,
+            174
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 399
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/running-right/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10345,
+          "bbox": [
+            28,
+            33,
+            163,
+            174
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 435
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/running-right/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9920,
+          "bbox": [
+            32,
+            34,
+            160,
+            174
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 424
+        },
+        {
+          "index": 5,
+          "file": "<RUN_DIR>/frames/running-right/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10055,
+          "bbox": [
+            29,
+            33,
+            163,
+            174
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 413
+        },
+        {
+          "index": 6,
+          "file": "<RUN_DIR>/frames/running-right/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10093,
+          "bbox": [
+            28,
+            37,
+            164,
+            171
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 448
+        },
+        {
+          "index": 7,
+          "file": "<RUN_DIR>/frames/running-right/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9938,
+          "bbox": [
+            28,
+            36,
+            164,
+            171
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 446
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/running-left/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10371,
+          "bbox": [
+            28,
+            36,
+            163,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 461
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/running-left/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10079,
+          "bbox": [
+            30,
+            35,
+            162,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 420
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/running-left/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10178,
+          "bbox": [
+            28,
+            35,
+            164,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 357
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/running-left/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10013,
+          "bbox": [
+            28,
+            35,
+            163,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 416
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/running-left/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9984,
+          "bbox": [
+            29,
+            35,
+            162,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 443
+        },
+        {
+          "index": 5,
+          "file": "<RUN_DIR>/frames/running-left/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10015,
+          "bbox": [
+            28,
+            38,
+            164,
+            170
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 432
+        },
+        {
+          "index": 6,
+          "file": "<RUN_DIR>/frames/running-left/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10008,
+          "bbox": [
+            28,
+            36,
+            164,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 412
+        },
+        {
+          "index": 7,
+          "file": "<RUN_DIR>/frames/running-left/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9877,
+          "bbox": [
+            29,
+            39,
+            162,
+            168
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 487
+        }
+      ]
+    },
+    {
+      "state": "waving",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/waving/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11545,
+          "bbox": [
+            40,
+            25,
+            152,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 291
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/waving/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11357,
+          "bbox": [
+            41,
+            27,
+            150,
+            181
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 257
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/waving/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11675,
+          "bbox": [
+            42,
+            25,
+            150,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 245
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/waving/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11613,
+          "bbox": [
+            40,
+            25,
+            152,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 277
+        }
+      ]
+    },
+    {
+      "state": "jumping",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/jumping/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10285,
+          "bbox": [
+            24,
+            43,
+            167,
+            165
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 451
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/jumping/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11472,
+          "bbox": [
+            33,
+            29,
+            158,
+            178
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 356
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/jumping/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10287,
+          "bbox": [
+            25,
+            43,
+            166,
+            164
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 385
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/jumping/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10147,
+          "bbox": [
+            24,
+            47,
+            168,
+            161
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 439
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/jumping/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10296,
+          "bbox": [
+            24,
+            46,
+            168,
+            162
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 474
+        }
+      ]
+    },
+    {
+      "state": "failed",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/failed/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8508,
+          "bbox": [
+            43,
+            45,
+            149,
+            163
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 234
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/failed/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8307,
+          "bbox": [
+            44,
+            45,
+            147,
+            163
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 248
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/failed/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8370,
+          "bbox": [
+            44,
+            45,
+            147,
+            163
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 261
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/failed/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8379,
+          "bbox": [
+            44,
+            45,
+            148,
+            163
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 267
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/failed/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8217,
+          "bbox": [
+            46,
+            45,
+            146,
+            163
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 266
+        },
+        {
+          "index": 5,
+          "file": "<RUN_DIR>/frames/failed/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8262,
+          "bbox": [
+            45,
+            45,
+            146,
+            162
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 262
+        },
+        {
+          "index": 6,
+          "file": "<RUN_DIR>/frames/failed/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8198,
+          "bbox": [
+            46,
+            45,
+            146,
+            162
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 243
+        },
+        {
+          "index": 7,
+          "file": "<RUN_DIR>/frames/failed/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8130,
+          "bbox": [
+            46,
+            45,
+            145,
+            163
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 233
+        }
+      ]
+    },
+    {
+      "state": "waiting",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/waiting/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10867,
+          "bbox": [
+            42,
+            32,
+            149,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 307
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/waiting/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10808,
+          "bbox": [
+            42,
+            32,
+            150,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 326
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/waiting/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10750,
+          "bbox": [
+            42,
+            32,
+            150,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 307
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/waiting/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11141,
+          "bbox": [
+            40,
+            32,
+            151,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 366
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/waiting/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11118,
+          "bbox": [
+            40,
+            32,
+            152,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 328
+        },
+        {
+          "index": 5,
+          "file": "<RUN_DIR>/frames/waiting/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10887,
+          "bbox": [
+            40,
+            32,
+            152,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 333
+        }
+      ]
+    },
+    {
+      "state": "running",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/running/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12262,
+          "bbox": [
+            42,
+            25,
+            151,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 153
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/running/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12409,
+          "bbox": [
+            39,
+            25,
+            153,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 156
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/running/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12607,
+          "bbox": [
+            39,
+            25,
+            153,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 173
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/running/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12441,
+          "bbox": [
+            40,
+            25,
+            152,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 181
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/running/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12324,
+          "bbox": [
+            41,
+            25,
+            151,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 157
+        },
+        {
+          "index": 5,
+          "file": "<RUN_DIR>/frames/running/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12185,
+          "bbox": [
+            42,
+            25,
+            150,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 162
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<RUN_DIR>/frames/review/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10483,
+          "bbox": [
+            42,
+            32,
+            149,
+            175
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 309
+        },
+        {
+          "index": 1,
+          "file": "<RUN_DIR>/frames/review/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10323,
+          "bbox": [
+            42,
+            32,
+            149,
+            175
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 321
+        },
+        {
+          "index": 2,
+          "file": "<RUN_DIR>/frames/review/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10365,
+          "bbox": [
+            42,
+            32,
+            150,
+            175
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 339
+        },
+        {
+          "index": 3,
+          "file": "<RUN_DIR>/frames/review/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10508,
+          "bbox": [
+            41,
+            32,
+            150,
+            175
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 322
+        },
+        {
+          "index": 4,
+          "file": "<RUN_DIR>/frames/review/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10630,
+          "bbox": [
+            40,
+            32,
+            151,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 370
+        },
+        {
+          "index": 5,
+          "file": "<RUN_DIR>/frames/review/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10503,
+          "bbox": [
+            41,
+            32,
+            151,
+            176
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 327
+        }
+      ]
+    }
+  ]
+}

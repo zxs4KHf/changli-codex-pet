@@ -1,0 +1,203 @@
+{
+  "ok": true,
+  "states": [
+    "idle",
+    "running"
+  ],
+  "target_height": 158,
+  "baseline": 183,
+  "frames": [
+    {
+      "frame": "<RUN_DIR>/frames/idle/00.png",
+      "before_bbox": [
+        20,
+        5,
+        171,
+        203
+      ],
+      "after_bbox": [
+        36,
+        25,
+        156,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/idle/01.png",
+      "before_bbox": [
+        21,
+        5,
+        171,
+        203
+      ],
+      "after_bbox": [
+        36,
+        25,
+        156,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/idle/02.png",
+      "before_bbox": [
+        21,
+        5,
+        171,
+        203
+      ],
+      "after_bbox": [
+        36,
+        25,
+        156,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/idle/03.png",
+      "before_bbox": [
+        21,
+        5,
+        171,
+        203
+      ],
+      "after_bbox": [
+        36,
+        25,
+        156,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/idle/04.png",
+      "before_bbox": [
+        21,
+        5,
+        171,
+        203
+      ],
+      "after_bbox": [
+        36,
+        25,
+        156,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/idle/05.png",
+      "before_bbox": [
+        21,
+        5,
+        171,
+        203
+      ],
+      "after_bbox": [
+        36,
+        25,
+        156,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/running/00.png",
+      "before_bbox": [
+        28,
+        5,
+        164,
+        203
+      ],
+      "after_bbox": [
+        42,
+        25,
+        151,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/running/01.png",
+      "before_bbox": [
+        24,
+        5,
+        167,
+        203
+      ],
+      "after_bbox": [
+        39,
+        25,
+        153,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/running/02.png",
+      "before_bbox": [
+        24,
+        5,
+        167,
+        203
+      ],
+      "after_bbox": [
+        39,
+        25,
+        153,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/running/03.png",
+      "before_bbox": [
+        26,
+        5,
+        166,
+        203
+      ],
+      "after_bbox": [
+        40,
+        25,
+        152,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/running/04.png",
+      "before_bbox": [
+        27,
+        5,
+        165,
+        203
+      ],
+      "after_bbox": [
+        41,
+        25,
+        151,
+        183
+      ],
+      "scale": 0.797979797979798
+    },
+    {
+      "frame": "<RUN_DIR>/frames/running/05.png",
+      "before_bbox": [
+        28,
+        5,
+        163,
+        203
+      ],
+      "after_bbox": [
+        42,
+        25,
+        150,
+        183
+      ],
+      "scale": 0.797979797979798
+    }
+  ]
+}
