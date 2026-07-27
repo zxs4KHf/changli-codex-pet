@@ -2,20 +2,38 @@
   "ok": true,
   "spriteVersionNumber": 2,
   "acceptanceProfile": "pragmatic-user-approved",
-  "runDir": "<RUN_DIR>",
-  "spritesheet": "<RUN_DIR>/final/spritesheet-extended.webp",
-  "validation": "<RUN_DIR>/final/validation-extended.json",
-  "installedValidation": "<RUN_DIR>/final/validation-installed.json",
-  "chromaDespill": "<RUN_DIR>/qa/chroma-despill-extended.json",
-  "contactSheet": "<RUN_DIR>/qa/contact-sheet-extended.png",
-  "directionSheet": "<RUN_DIR>/qa/look-directions.png",
-  "directionSemantics": "<RUN_DIR>/qa/direction-semantics.json",
-  "continuity": "<RUN_DIR>/qa/look-continuity.json",
-  "review": "<RUN_DIR>/qa/review.json",
-  "package": "<CODEX_HOME>/pets/changli",
+  "repairType": "existing-v2-alpha-preserving-edge-color-repair",
+  "spritesheet": "<REPO_ROOT>/pet/changli/spritesheet.webp",
+  "validation": "<REPO_ROOT>/workflow/qa/validation-release.json",
+  "chromaDespill": "<REPO_ROOT>/workflow/qa/chroma-despill-extended.json",
+  "contactSheet": "<REPO_ROOT>/docs/images/contact-sheet.png",
+  "directionSheet": "<REPO_ROOT>/docs/images/look-directions.png",
+  "directionSemantics": "<REPO_ROOT>/workflow/qa/direction-semantics.json",
+  "blindDirectionValidation": "<REPO_ROOT>/workflow/qa/direction-blind-validation.json",
+  "blindReviewResolution": "<REPO_ROOT>/workflow/qa/blind-review-resolution.json",
+  "continuity": "<REPO_ROOT>/workflow/qa/look-continuity.json",
+  "review": "<REPO_ROOT>/workflow/qa/review.json",
+  "visualQa": "<REPO_ROOT>/workflow/qa/final-visual-qa.json",
+  "releaseSha256": "5BC49E16AEA040C5D5101ED4FC8DCB174942079ECD98B18EAE091BBD2B2220FC",
+  "despillResult": {
+    "algorithm": "edge-local-chroma-spill-suppression",
+    "chromaKey": "#00FF00",
+    "changedPixels": 19614,
+    "decontaminatedPixels": 18437,
+    "alphaPreserved": true
+  },
+  "validationResult": {
+    "ok": true,
+    "width": 1536,
+    "height": 2288,
+    "rows": 11,
+    "transparentRgbResiduePixels": 0,
+    "warnings": 0,
+    "errors": 0
+  },
   "acceptedWarnings": [
+    "some intermediate look axes are subtle in isolated blind review",
     "045 to 067.5 uses a larger but readable head-turn step",
-    "337.5 to 000 uses a larger but directionally correct loop closure",
-    "independent three-reviewer blind direction vote was omitted under the user's pragmatic acceptance request"
+    "337.5 to 000 uses a larger but non-reversing loop closure"
   ]
 }

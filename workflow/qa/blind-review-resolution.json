@@ -1,0 +1,19 @@
+{
+  "decision": "accept",
+  "severity": "minor",
+  "reviewed_by": "parent",
+  "scope": "fresh three-reviewer blind direction QA on the repaired release atlas",
+  "failed_checks": [],
+  "review_warnings": [
+    "horizontal cues are ambiguous at 135, 157.5 and 202.5 in the isolated normal-size pairs",
+    "vertical cues are ambiguous at 225, 247.5, 292.5, 315 and 337.5 in the isolated normal-size pairs",
+    "045 to 067.5 and 337.5 to 000 retain measurable continuity shifts"
+  ],
+  "evidence": [
+    "all four cardinal hard gates pass strict-majority blind validation",
+    "the labeled direction sheet shows no wrong-quadrant cardinal or visible reversal",
+    "direction-semantics.json records no fail verdict",
+    "the color repair preserves the complete alpha mask and pose geometry"
+  ],
+  "note": "Intermediate ambiguity remains documented for a future complete-row resynthesis and does not block this pragmatic release."
+}

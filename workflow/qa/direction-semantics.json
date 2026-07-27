@@ -1,122 +1,30 @@
 {
-  "ok": true,
-  "review_standard": "pragmatic-user-approved",
+  "schema_version": 1,
+  "reviewed_source": "qa/look-directions.png",
+  "review_mode": "labeled normal-size existing-source repair",
   "directions": [
-    {
-      "direction": "000",
-      "expected": "up",
-      "observed": "eyes and chin lifted",
-      "verdict": "pass",
-      "reason": "clear upward gaze"
-    },
-    {
-      "direction": "022.5",
-      "expected": "up-right",
-      "observed": "upward gaze with slight screen-right turn",
-      "verdict": "pass",
-      "reason": "both axes visible"
-    },
-    {
-      "direction": "045",
-      "expected": "up-right",
-      "observed": "stronger screen-right head turn with upward eyes",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "067.5",
-      "expected": "up-right",
-      "observed": "near-profile screen-right with slight upward gaze",
-      "verdict": "warning",
-      "reason": "correct quadrant; turn from 045 is larger than neighboring steps"
-    },
-    {
-      "direction": "090",
-      "expected": "right",
-      "observed": "nose and pupils toward screen-right; ponytail trails screen-left",
-      "verdict": "pass",
-      "reason": "unmistakable cardinal"
-    },
-    {
-      "direction": "112.5",
-      "expected": "down-right",
-      "observed": "screen-right turn with lowered eyes",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "135",
-      "expected": "down-right",
-      "observed": "lowered head with remaining screen-right cue",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "157.5",
-      "expected": "down-right",
-      "observed": "mostly down with a small screen-right cue",
-      "verdict": "pass",
-      "reason": "one step before down"
-    },
-    {
-      "direction": "180",
-      "expected": "down",
-      "observed": "front-facing bowed head and lowered pupils",
-      "verdict": "pass",
-      "reason": "unmistakable cardinal"
-    },
-    {
-      "direction": "202.5",
-      "expected": "down-left",
-      "observed": "lowered eyes with slight screen-left turn",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "225",
-      "expected": "down-left",
-      "observed": "stronger screen-left turn while gaze remains low",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "247.5",
-      "expected": "down-left",
-      "observed": "near-profile screen-left with residual downward cue",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "270",
-      "expected": "left",
-      "observed": "nose and pupils toward screen-left; ponytail trails screen-right",
-      "verdict": "pass",
-      "reason": "unmistakable cardinal"
-    },
-    {
-      "direction": "292.5",
-      "expected": "up-left",
-      "observed": "screen-left turn with rising eyes",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "315",
-      "expected": "up-left",
-      "observed": "shallower screen-left turn with upward eyes",
-      "verdict": "pass",
-      "reason": "correct quadrant"
-    },
-    {
-      "direction": "337.5",
-      "expected": "up-left",
-      "observed": "near-front pose retaining a small screen-left and upward cue",
-      "verdict": "warning",
-      "reason": "correct quadrant; transition back to 000 has a larger visual difference"
-    }
+    {"direction":"000","expected":"up","observed":"eyes and chin clearly lift upward with stable frontal body","verdict":"pass","reason":"vertical up cue is readable at normal size"},
+    {"direction":"022.5","expected":"up-right","observed":"upward gaze with a subtle screen-right turn","verdict":"pass","reason":"correct quadrant and continuous from 000"},
+    {"direction":"045","expected":"up-right","observed":"face and eyes turn screen-right while remaining lifted","verdict":"pass","reason":"both axes are readable"},
+    {"direction":"067.5","expected":"up-right","observed":"stronger screen-right profile with remaining upward cue","verdict":"warning","reason":"direction is correct, but continuity metrics report a 13.3px center shift from 045"},
+    {"direction":"090","expected":"right","observed":"clear screen-right profile","verdict":"pass","reason":"right cardinal is unmistakable"},
+    {"direction":"112.5","expected":"down-right","observed":"screen-right profile begins lowering eyes and head","verdict":"pass","reason":"correct quadrant"},
+    {"direction":"135","expected":"down-right","observed":"head and eyes continue downward on the screen-right side","verdict":"pass","reason":"correct quadrant and ordered progression"},
+    {"direction":"157.5","expected":"down-right","observed":"downward gaze retains a subtle screen-right cue","verdict":"warning","reason":"direction is correct; continuity scan reports a transparent-row candidate near the lower garment that is not a visible filled-body seam in the labeled sheet"},
+    {"direction":"180","expected":"down","observed":"eyes and chin point clearly downward with more top-of-head visible","verdict":"pass","reason":"down cardinal is unmistakable"},
+    {"direction":"202.5","expected":"down-left","observed":"downward gaze begins turning toward screen-left","verdict":"pass","reason":"correct quadrant"},
+    {"direction":"225","expected":"down-left","observed":"face turns further screen-left while staying down","verdict":"pass","reason":"both axes are readable"},
+    {"direction":"247.5","expected":"down-left","observed":"near-left profile retains a downward cue","verdict":"pass","reason":"correct quadrant and continuous progression"},
+    {"direction":"270","expected":"left","observed":"clear screen-left profile","verdict":"pass","reason":"left cardinal is unmistakable and opposes 090"},
+    {"direction":"292.5","expected":"up-left","observed":"screen-left profile begins raising eyes and head","verdict":"pass","reason":"correct quadrant"},
+    {"direction":"315","expected":"up-left","observed":"face continues toward frontal while retaining screen-left and up cues","verdict":"pass","reason":"correct quadrant"},
+    {"direction":"337.5","expected":"up-left","observed":"near-up pose retains a subtle screen-left cue","verdict":"warning","reason":"direction is correct, but wrap to 000 has a 10px center shift and 1.24 area ratio"}
   ],
-  "accepted_warnings": [
-    "045 to 067.5 has a larger but readable head-turn step",
-    "337.5 to 000 has a larger but directionally correct loop closure"
-  ]
+  "summary": {
+    "failures": 0,
+    "warnings": 3,
+    "cardinals_pass": true,
+    "wrong_quadrant_poses": 0,
+    "visible_reversals": 0
+  }
 }
