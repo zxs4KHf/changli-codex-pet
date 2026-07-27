@@ -1,0 +1,24 @@
+{
+  "pet_id": "changli",
+  "display_name": "长离",
+  "description": "《鸣潮》长离的 Q 版动态桌宠，包含完整任务状态动作与 16 个视线方向。",
+  "sprite_version_number": 2,
+  "atlas": {
+    "columns": 8,
+    "rows": 11,
+    "cell_width": 192,
+    "cell_height": 208,
+    "width": 1536,
+    "height": 2288
+  },
+  "repair": {
+    "type": "existing-v2-alpha-preserving-edge-color-repair",
+    "chroma_key": "#00FF00",
+    "future_generation_chroma_key": "#0000FF",
+    "source_sha256": "64FD97F3624458EC6D22A2892CD129F187019BBC305C2DBC6C44504AAED2A97A",
+    "release_sha256": "5BC49E16AEA040C5D5101ED4FC8DCB174942079ECD98B18EAE091BBD2B2220FC",
+    "alpha_preserved": true,
+    "changed_edge_pixels": 19614,
+    "decontaminated_pixels": 18437
+  }
+}

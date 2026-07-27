@@ -1,0 +1,31 @@
+{
+  "visual_qa": "pass",
+  "reviewer": "independent-final-visual-qa",
+  "reviewed_files": [
+    "docs/images/contact-sheet.png",
+    "docs/images/look-directions.png",
+    "workflow/qa/previews/idle.gif",
+    "workflow/qa/previews/running-right.gif",
+    "workflow/qa/previews/running-left.gif",
+    "workflow/qa/previews/waving.gif",
+    "workflow/qa/previews/jumping.gif",
+    "workflow/qa/previews/failed.gif",
+    "workflow/qa/previews/waiting.gif",
+    "workflow/qa/previews/running.gif",
+    "workflow/qa/previews/review.gif",
+    "workflow/qa/direction-semantics.json",
+    "workflow/qa/direction-blind-validation.json",
+    "workflow/qa/look-continuity.json",
+    "workflow/qa/validation-release.json"
+  ],
+  "qa_note": "All eleven rows preserve Changli's identity with clean transparent edges, intact silhouettes, correct state motion, and readable cardinal look directions.",
+  "direction_semantics": "16/16 coherent; 000 up, 090 screen-right, 180 down, and 270 screen-left pass; intermediates form a clockwise loop with minor reviewed ambiguity only.",
+  "review_warnings": [
+    "045 to 067.5 registration shift",
+    "157.5 transparent-row candidate is not visibly disruptive",
+    "337.5 to 000 wrap shift and area change",
+    "some intermediate blind-pair axes are ambiguous"
+  ],
+  "repair_rows": [],
+  "repair_notes": "No visible hard-gate failure; retain the documented intermediate-direction continuity refinements for a future full-row resynthesis."
+}

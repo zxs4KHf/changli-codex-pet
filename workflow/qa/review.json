@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "frames_root": "<RUN_DIR>/frames",
+  "frames_root": "<REPAIR_RUN>\\frames",
   "states": [
     "idle",
     "running-right",
@@ -19,14 +19,14 @@
       "state": "idle",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/idle/00.png",
+          "file": "<REPAIR_RUN>\\frames\\idle\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12983,
@@ -37,11 +37,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 165
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/idle/01.png",
+          "file": "<REPAIR_RUN>\\frames\\idle\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13156,
@@ -52,11 +52,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 170
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/idle/02.png",
+          "file": "<REPAIR_RUN>\\frames\\idle\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13027,
@@ -67,11 +67,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 175
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/idle/03.png",
+          "file": "<REPAIR_RUN>\\frames\\idle\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13031,
@@ -82,11 +82,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 171
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "<RUN_DIR>/frames/idle/04.png",
+          "file": "<REPAIR_RUN>\\frames\\idle\\04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13069,
@@ -97,11 +97,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 168
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "<RUN_DIR>/frames/idle/05.png",
+          "file": "<REPAIR_RUN>\\frames\\idle\\05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13064,
@@ -112,7 +112,7 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 196
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -120,160 +120,29 @@
       "state": "running-right",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/running-right/00.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 10572,
-          "bbox": [
-            26,
-            33,
-            165,
-            174
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 438
-        },
-        {
-          "index": 1,
-          "file": "<RUN_DIR>/frames/running-right/01.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 10255,
-          "bbox": [
-            26,
-            33,
-            165,
-            174
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 378
-        },
-        {
-          "index": 2,
-          "file": "<RUN_DIR>/frames/running-right/02.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 10166,
-          "bbox": [
-            28,
-            34,
-            164,
-            174
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 399
-        },
-        {
-          "index": 3,
-          "file": "<RUN_DIR>/frames/running-right/03.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 10345,
-          "bbox": [
-            28,
-            33,
-            163,
-            174
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 435
-        },
-        {
-          "index": 4,
-          "file": "<RUN_DIR>/frames/running-right/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 9920,
-          "bbox": [
-            32,
-            34,
-            160,
-            174
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 424
-        },
-        {
-          "index": 5,
-          "file": "<RUN_DIR>/frames/running-right/05.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 10055,
-          "bbox": [
-            29,
-            33,
-            163,
-            174
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 413
-        },
-        {
-          "index": 6,
-          "file": "<RUN_DIR>/frames/running-right/06.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 10093,
-          "bbox": [
-            28,
-            37,
-            164,
-            171
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 448
-        },
-        {
-          "index": 7,
-          "file": "<RUN_DIR>/frames/running-right/07.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 9938,
-          "bbox": [
-            28,
-            36,
-            164,
-            171
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 446
-        }
-      ]
-    },
-    {
-      "state": "running-left",
-      "expected_frames": 8,
-      "actual_frames": 8,
-      "extraction_method": "components",
-      "ok": true,
-      "errors": [],
-      "warnings": [],
-      "frames": [
-        {
-          "index": 0,
-          "file": "<RUN_DIR>/frames/running-left/00.png",
+          "file": "<REPAIR_RUN>\\frames\\running-right\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10371,
           "bbox": [
-            28,
+            29,
             36,
-            163,
+            164,
             172
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 461
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/running-left/01.png",
+          "file": "<REPAIR_RUN>\\frames\\running-right\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10079,
@@ -284,11 +153,11 @@
             172
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 420
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/running-left/02.png",
+          "file": "<REPAIR_RUN>\\frames\\running-right\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10178,
@@ -299,41 +168,41 @@
             172
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 357
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/running-left/03.png",
+          "file": "<REPAIR_RUN>\\frames\\running-right\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10013,
           "bbox": [
-            28,
+            29,
+            35,
+            164,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "<REPAIR_RUN>\\frames\\running-right\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9984,
+          "bbox": [
+            30,
             35,
             163,
             172
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 416
-        },
-        {
-          "index": 4,
-          "file": "<RUN_DIR>/frames/running-left/04.png",
-          "width": 192,
-          "height": 208,
-          "nontransparent_pixels": 9984,
-          "bbox": [
-            29,
-            35,
-            162,
-            172
-          ],
-          "edge_pixels": 0,
-          "chroma_adjacent_pixels": 443
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "<RUN_DIR>/frames/running-left/05.png",
+          "file": "<REPAIR_RUN>\\frames\\running-right\\05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10015,
@@ -344,11 +213,11 @@
             170
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 432
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 6,
-          "file": "<RUN_DIR>/frames/running-left/06.png",
+          "file": "<REPAIR_RUN>\\frames\\running-right\\06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10008,
@@ -359,11 +228,142 @@
             172
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 412
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 7,
-          "file": "<RUN_DIR>/frames/running-left/07.png",
+          "file": "<REPAIR_RUN>\\frames\\running-right\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9877,
+          "bbox": [
+            30,
+            39,
+            163,
+            168
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": null,
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10371,
+          "bbox": [
+            28,
+            36,
+            163,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10079,
+          "bbox": [
+            30,
+            35,
+            162,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10178,
+          "bbox": [
+            28,
+            35,
+            164,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10013,
+          "bbox": [
+            28,
+            35,
+            163,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9984,
+          "bbox": [
+            29,
+            35,
+            162,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10015,
+          "bbox": [
+            28,
+            38,
+            164,
+            170
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10008,
+          "bbox": [
+            28,
+            36,
+            164,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "<REPAIR_RUN>\\frames\\running-left\\07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 9877,
@@ -374,7 +374,7 @@
             168
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 487
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -382,14 +382,14 @@
       "state": "waving",
       "expected_frames": 4,
       "actual_frames": 4,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/waving/00.png",
+          "file": "<REPAIR_RUN>\\frames\\waving\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11545,
@@ -400,11 +400,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 291
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/waving/01.png",
+          "file": "<REPAIR_RUN>\\frames\\waving\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11357,
@@ -415,11 +415,11 @@
             181
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 257
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/waving/02.png",
+          "file": "<REPAIR_RUN>\\frames\\waving\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11675,
@@ -430,11 +430,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 245
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/waving/03.png",
+          "file": "<REPAIR_RUN>\\frames\\waving\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11613,
@@ -445,7 +445,7 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 277
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -453,14 +453,14 @@
       "state": "jumping",
       "expected_frames": 5,
       "actual_frames": 5,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/jumping/00.png",
+          "file": "<REPAIR_RUN>\\frames\\jumping\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10285,
@@ -471,11 +471,11 @@
             165
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 451
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/jumping/01.png",
+          "file": "<REPAIR_RUN>\\frames\\jumping\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11472,
@@ -486,11 +486,11 @@
             178
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 356
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/jumping/02.png",
+          "file": "<REPAIR_RUN>\\frames\\jumping\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10287,
@@ -501,11 +501,11 @@
             164
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 385
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/jumping/03.png",
+          "file": "<REPAIR_RUN>\\frames\\jumping\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10147,
@@ -516,11 +516,11 @@
             161
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 439
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "<RUN_DIR>/frames/jumping/04.png",
+          "file": "<REPAIR_RUN>\\frames\\jumping\\04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10296,
@@ -531,7 +531,7 @@
             162
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 474
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -539,14 +539,14 @@
       "state": "failed",
       "expected_frames": 8,
       "actual_frames": 8,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/failed/00.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8508,
@@ -557,11 +557,11 @@
             163
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 234
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/failed/01.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8307,
@@ -572,11 +572,11 @@
             163
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 248
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/failed/02.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8370,
@@ -587,11 +587,11 @@
             163
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 261
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/failed/03.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8379,
@@ -602,11 +602,11 @@
             163
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 267
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "<RUN_DIR>/frames/failed/04.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8217,
@@ -617,11 +617,11 @@
             163
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 266
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "<RUN_DIR>/frames/failed/05.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8262,
@@ -632,11 +632,11 @@
             162
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 262
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 6,
-          "file": "<RUN_DIR>/frames/failed/06.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8198,
@@ -647,11 +647,11 @@
             162
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 243
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 7,
-          "file": "<RUN_DIR>/frames/failed/07.png",
+          "file": "<REPAIR_RUN>\\frames\\failed\\07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 8130,
@@ -662,7 +662,7 @@
             163
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 233
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -670,14 +670,14 @@
       "state": "waiting",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/waiting/00.png",
+          "file": "<REPAIR_RUN>\\frames\\waiting\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10867,
@@ -688,11 +688,11 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 307
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/waiting/01.png",
+          "file": "<REPAIR_RUN>\\frames\\waiting\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10808,
@@ -703,11 +703,11 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 326
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/waiting/02.png",
+          "file": "<REPAIR_RUN>\\frames\\waiting\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10750,
@@ -718,11 +718,11 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 307
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/waiting/03.png",
+          "file": "<REPAIR_RUN>\\frames\\waiting\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11141,
@@ -733,11 +733,11 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 366
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "<RUN_DIR>/frames/waiting/04.png",
+          "file": "<REPAIR_RUN>\\frames\\waiting\\04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11118,
@@ -748,11 +748,11 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 328
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "<RUN_DIR>/frames/waiting/05.png",
+          "file": "<REPAIR_RUN>\\frames\\waiting\\05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10887,
@@ -763,7 +763,7 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 333
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -771,14 +771,14 @@
       "state": "running",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/running/00.png",
+          "file": "<REPAIR_RUN>\\frames\\running\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12262,
@@ -789,11 +789,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 153
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/running/01.png",
+          "file": "<REPAIR_RUN>\\frames\\running\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12409,
@@ -804,11 +804,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 156
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/running/02.png",
+          "file": "<REPAIR_RUN>\\frames\\running\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12607,
@@ -819,11 +819,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 173
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/running/03.png",
+          "file": "<REPAIR_RUN>\\frames\\running\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12441,
@@ -834,11 +834,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 181
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "<RUN_DIR>/frames/running/04.png",
+          "file": "<REPAIR_RUN>\\frames\\running\\04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12324,
@@ -849,11 +849,11 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 157
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "<RUN_DIR>/frames/running/05.png",
+          "file": "<REPAIR_RUN>\\frames\\running\\05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12185,
@@ -864,7 +864,7 @@
             183
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 162
+          "chroma_adjacent_pixels": 0
         }
       ]
     },
@@ -872,14 +872,14 @@
       "state": "review",
       "expected_frames": 6,
       "actual_frames": 6,
-      "extraction_method": "components",
+      "extraction_method": null,
       "ok": true,
       "errors": [],
       "warnings": [],
       "frames": [
         {
           "index": 0,
-          "file": "<RUN_DIR>/frames/review/00.png",
+          "file": "<REPAIR_RUN>\\frames\\review\\00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10483,
@@ -890,11 +890,11 @@
             175
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 309
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
-          "file": "<RUN_DIR>/frames/review/01.png",
+          "file": "<REPAIR_RUN>\\frames\\review\\01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10323,
@@ -905,11 +905,11 @@
             175
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 321
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "<RUN_DIR>/frames/review/02.png",
+          "file": "<REPAIR_RUN>\\frames\\review\\02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10365,
@@ -920,11 +920,11 @@
             175
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 339
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "<RUN_DIR>/frames/review/03.png",
+          "file": "<REPAIR_RUN>\\frames\\review\\03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10508,
@@ -935,11 +935,11 @@
             175
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 322
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "<RUN_DIR>/frames/review/04.png",
+          "file": "<REPAIR_RUN>\\frames\\review\\04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10630,
@@ -950,11 +950,11 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 370
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
-          "file": "<RUN_DIR>/frames/review/05.png",
+          "file": "<REPAIR_RUN>\\frames\\review\\05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10503,
@@ -965,7 +965,7 @@
             176
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 327
+          "chroma_adjacent_pixels": 0
         }
       ]
     }
