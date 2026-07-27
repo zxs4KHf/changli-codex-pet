@@ -29,7 +29,7 @@ Codex Pets 会根据聊天任务状态切换动画，例如任务处理中、等
 - Q 版长离角色，金色眼睛、粉色短发、耳后至后颈高度的单一低位马尾。
 - 9 组标准动画状态，共 57 个标准动画帧。
 - 16 个顺时针视线方向。
-- 最终共使用 73 个动画/方向帧。
+- 73 个动画/方向帧，另含 1 个 v2 neutral 格，共 74 个非空单元格。
 - v2 图集：`1536×2288`，8 列 × 11 行。
 - 单元格：`192×208`。
 - 透明 WebP，`spriteVersionNumber: 2`。
@@ -79,6 +79,8 @@ Codex Pets 会根据聊天任务状态切换动画，例如任务处理中、等
    powershell -ExecutionPolicy Bypass -File .\install.ps1
    ```
 
+   安装器会验证 manifest 与复制后的 SHA-256。升级旧版本时，默认把原包备份到 `%CODEX_HOME%\pet-backups`；自动化或不需要备份时可传入 `-SkipBackup`。
+
 3. 打开 Codex / ChatGPT 桌面应用：
 
    - 进入 `Settings > Pets`；
@@ -122,6 +124,7 @@ Remove-Item -LiteralPath "$HOME\.codex\pets\changli" -Recurse
 │       └── spritesheet.webp         # 可安装的最终 v2 图集
 ├── docs/
 │   ├── PRODUCTION_WORKFLOW.md       # 成熟制作、去边与返修规范
+│   ├── RELEASE_CHECKLIST.md         # 发布前检查清单
 │   └── images/
 │       ├── contact-sheet.png        # 11 行总览
 │       └── look-directions.png      # 16 方向语义检查图
@@ -130,7 +133,11 @@ Remove-Item -LiteralPath "$HOME\.codex\pets\changli" -Recurse
 │   ├── layout-guides/               # 各动画行的槽位布局参考
 │   ├── qa/                          # 结构、透明度、逐行动画、盲测与方向检查结果
 │   └── tools/
-│       └── normalize_standard_scale.py
+│       ├── normalize_standard_scale.py
+│       └── validate_release.py       # 自包含发布校验
+├── .github/workflows/               # GitHub Actions 发布检查
+├── CONTRIBUTING.md
+├── requirements-dev.txt
 ├── install.ps1
 ├── NOTICE.md
 └── README.md
@@ -292,6 +299,15 @@ row 10: 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5
 它们没有造成方向反转、裁切、身份突变或不可用问题，因此没有继续反复生成。
 
 详细生产与返修规则见 [docs/PRODUCTION_WORKFLOW.md](docs/PRODUCTION_WORKFLOW.md)。
+
+### 一键验证发布包
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python workflow/tools/validate_release.py
+```
+
+该命令会同时检查 manifest、图集尺寸与透明度、74 个非空单元格（73 帧动画/方向 + neutral）、未使用格、绿色边缘、左右跑精确镜像、发布哈希以及保留的 QA 门槛。GitHub Actions 会在每个 PR 中运行同一套检查，并在 Windows 上测试安装脚本。
 
 ## 自己制作其他角色
 

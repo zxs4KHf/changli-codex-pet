@@ -31,6 +31,15 @@
 - 联系表和逐行动画无身份漂移、裁切、方向反转或明显跳帧；
 - 仓库发布图集、本机安装图集 SHA-256 完全一致。
 
+仓库自带的聚合校验命令：
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python workflow/tools/validate_release.py
+```
+
+它不依赖本机安装 `hatch-pet`，因此贡献者和 GitHub Actions 都能复现最关键的发布门槛。
+
 ## 未来返修策略
 
 当前方向行有三项轻微连续性提醒：`045→067.5` 中心移动偏大、`157.5` 存在透明行候选、`337.5→000` 首尾尺寸变化偏大。它们未造成基准方向错误或可见反转。
