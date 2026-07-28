@@ -125,6 +125,7 @@ Remove-Item -LiteralPath "$HOME\.codex\pets\changli" -Recurse
 ├── docs/
 │   ├── PRODUCTION_WORKFLOW.md       # 成熟制作、去边与返修规范
 │   ├── RELEASE_CHECKLIST.md         # 发布前检查清单
+│   ├── V1.1_CANDIDATE_STATUS.md     # v1.1 候选恢复点与阻塞说明
 │   └── images/
 │       ├── contact-sheet.png        # 11 行总览
 │       └── look-directions.png      # 16 方向语义检查图
@@ -298,7 +299,7 @@ row 10: 180, 202.5, 225, 247.5, 270, 292.5, 315, 337.5
 
 它们没有造成方向反转、裁切、身份突变或不可用问题，因此没有继续反复生成。
 
-详细生产与返修规则见 [docs/PRODUCTION_WORKFLOW.md](docs/PRODUCTION_WORKFLOW.md)。
+详细生产与返修规则见 [docs/PRODUCTION_WORKFLOW.md](docs/PRODUCTION_WORKFLOW.md)。当前未发布的 v1.1 候选进度、恢复顺序和安全边界见 [docs/V1.1_CANDIDATE_STATUS.md](docs/V1.1_CANDIDATE_STATUS.md)。
 
 ### 一键验证发布包
 

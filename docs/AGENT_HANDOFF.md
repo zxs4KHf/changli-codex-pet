@@ -1,6 +1,6 @@
 # 长离 Codex 桌宠：Agent 交接文档
 
-更新：2026-07-27（Asia/Shanghai）
+更新：2026-07-28（Asia/Shanghai）
 
 ## 当前发布状态
 
@@ -55,6 +55,10 @@
 - `workflow/qa/run-summary.json`
 
 完整生产约束见 `docs/PRODUCTION_WORKFLOW.md`。
+
+## v1.1 候选
+
+v1.1 已完成标准行动作 A/B、Look 机制和四基准方向，但完整 row 9 受图像模型冷却与无效 CLI 凭据阻塞。稳定版未被替换。继续开发前先阅读 `docs/V1.1_CANDIDATE_STATUS.md`，不要重做已拒绝的标准动作，也不要单格拼补 Look。
 
 ## 发布前复核命令
 
