@@ -2,6 +2,17 @@
   "decision": "accept",
   "severity": "minor",
   "reviewed_by": "parent",
+  "atlas_sha256": "5BC49E16AEA040C5D5101ED4FC8DCB174942079ECD98B18EAE091BBD2B2220FC",
+  "reviewed_failures": [
+    "horizontal-6:B",
+    "horizontal-7:A",
+    "horizontal-7:B",
+    "vertical-5:A",
+    "vertical-6:A",
+    "vertical-6:B",
+    "vertical-7:A",
+    "vertical-7:B"
+  ],
   "scope": "fresh three-reviewer blind direction QA on the repaired release atlas",
   "failed_checks": [],
   "review_warnings": [

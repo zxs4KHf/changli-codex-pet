@@ -13,6 +13,7 @@ jobs:
   validate-release:
     name: Validate release
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -21,11 +22,13 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-dev.txt
       - run: python -m pip install --requirement requirements-dev.txt
+      - run: python -m unittest discover -s tests -v
       - run: python workflow/tools/validate_release.py
 
   test-windows-installer:
     name: Test Windows installer
     runs-on: windows-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Install into an isolated Codex home
@@ -38,6 +41,84 @@ jobs:
           if ($source -ne $installed) { throw "Installed spritesheet hash mismatch" }
           .\install.ps1 -SkipBackup
           Set-Content -LiteralPath (Join-Path $env:CODEX_HOME "pets\changli\pet.json") -Value '{"id":"old-package"}' -Encoding UTF8
+          Set-Content -LiteralPath (Join-Path $env:CODEX_HOME "pets\changli\obsolete.txt") -Value 'preserve in rollback and backup' -Encoding UTF8
+          $oldManifestHash = (Get-FileHash (Join-Path $env:CODEX_HOME "pets\changli\pet.json") -Algorithm SHA256).Hash
+          $env:CHANGLI_INSTALL_TEST_FAIL_AFTER_SWAP = "1"
+          $failed = $false
+          try { .\install.ps1 } catch { $failed = $true }
+          $env:CHANGLI_INSTALL_TEST_FAIL_AFTER_SWAP = $null
+          if (-not $failed) { throw "Expected simulated post-swap failure" }
+          $rolledBackHash = (Get-FileHash (Join-Path $env:CODEX_HOME "pets\changli\pet.json") -Algorithm SHA256).Hash
+          if ($rolledBackHash -ne $oldManifestHash) { throw "Installer did not roll back the old manifest" }
+          if (-not (Test-Path (Join-Path $env:CODEX_HOME "pets\changli\obsolete.txt"))) { throw "Rollback lost an old package file" }
           .\install.ps1
           $backups = @(Get-ChildItem -LiteralPath (Join-Path $env:CODEX_HOME "pet-backups") -Directory)
           if ($backups.Count -ne 1) { throw "Expected one installer backup, got $($backups.Count)" }
+          if (-not (Test-Path (Join-Path $backups[0].FullName "obsolete.txt"))) { throw "Whole-directory backup lost an old package file" }
+          if (Test-Path (Join-Path $env:CODEX_HOME "pets\changli\obsolete.txt")) { throw "New package contains an obsolete file" }
+          Set-Content -LiteralPath (Join-Path $env:CODEX_HOME "pets\changli\pet.json") -Value '{"id":"old-package-for-failed-recovery"}' -Encoding UTF8
+          Set-Content -LiteralPath (Join-Path $env:CODEX_HOME "pets\changli\obsolete.txt") -Value 'preserve on failed recovery' -Encoding UTF8
+          $env:CHANGLI_INSTALL_TEST_FAIL_AFTER_SWAP = "1"
+          $env:CHANGLI_INSTALL_TEST_FAIL_DURING_ROLLBACK = "1"
+          $failed = $false
+          try { .\install.ps1 } catch { $failed = $true; $failureMessage = $_.Exception.Message }
+          $env:CHANGLI_INSTALL_TEST_FAIL_AFTER_SWAP = $null
+          $env:CHANGLI_INSTALL_TEST_FAIL_DURING_ROLLBACK = $null
+          if (-not $failed) { throw "Expected simulated rollback restoration failure" }
+          $rollbackDirs = @(Get-ChildItem -LiteralPath (Join-Path $env:CODEX_HOME "pets") -Directory -Filter ".changli-rollback-*")
+          if ($rollbackDirs.Count -ne 1) { throw "Expected one preserved rollback directory, got $($rollbackDirs.Count)" }
+          if (-not (Test-Path (Join-Path $rollbackDirs[0].FullName "obsolete.txt"))) { throw "Failed recovery did not preserve the old package" }
+          if ($failureMessage -notlike "*Previous package preservation path:*") { throw "Failure did not report the preserved rollback path" }
+      - name: Reject corrupted source and concurrent installation
+        shell: pwsh
+        run: |
+          $corruptRoot = Join-Path $env:RUNNER_TEMP "corrupt-source"
+          New-Item -ItemType Directory -Force -Path $corruptRoot | Out-Null
+          Copy-Item .\install.ps1 (Join-Path $corruptRoot "install.ps1")
+          Copy-Item .\pet (Join-Path $corruptRoot "pet") -Recurse
+          [IO.File]::WriteAllBytes((Join-Path $corruptRoot "pet\changli\spritesheet.webp"), [byte[]](1,2,3,4))
+          $env:CODEX_HOME = Join-Path $env:RUNNER_TEMP "corrupt-destination"
+          $failed = $false
+          try { & (Join-Path $corruptRoot "install.ps1") -SkipBackup } catch { $failed = $true }
+          if (-not $failed) { throw "Corrupted source unexpectedly installed" }
+          if (Test-Path (Join-Path $env:CODEX_HOME "pets\changli")) { throw "Corrupted source created a package" }
+
+          $env:CODEX_HOME = Join-Path $env:RUNNER_TEMP "locked-destination"
+          $petsRoot = Join-Path $env:CODEX_HOME "pets"
+          New-Item -ItemType Directory -Force -Path $petsRoot | Out-Null
+          $stream = [IO.File]::Open((Join-Path $petsRoot ".changli-install.lock"), [IO.FileMode]::OpenOrCreate, [IO.FileAccess]::ReadWrite, [IO.FileShare]::None)
+          try {
+            $failed = $false
+            try { .\install.ps1 -SkipBackup } catch { $failed = $true }
+            if (-not $failed) { throw "Concurrent installer unexpectedly acquired the lock" }
+          }
+          finally {
+            $stream.Dispose()
+          }
+
+  test-windows-powershell-51:
+    name: Test Windows PowerShell 5.1
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install from a Unicode path with Windows PowerShell
+        shell: powershell
+        run: |
+          $unicodeRoot = Join-Path $env:RUNNER_TEMP "长离 test path"
+          New-Item -ItemType Directory -Force -Path $unicodeRoot | Out-Null
+          Copy-Item -Path (Join-Path $env:GITHUB_WORKSPACE "*") -Destination $unicodeRoot -Recurse -Force
+          $env:CODEX_HOME = Join-Path $env:RUNNER_TEMP "codex-home-ps51"
+          & (Join-Path $unicodeRoot "install.ps1") -SkipBackup
+          Set-Content -LiteralPath (Join-Path $env:CODEX_HOME "pets\changli\pet.json") -Value '{"id":"old-package-for-ps5-rollback"}' -Encoding UTF8
+          Set-Content -LiteralPath (Join-Path $env:CODEX_HOME "pets\changli\obsolete.txt") -Value 'PS5 rollback sentinel' -Encoding UTF8
+          $env:CHANGLI_INSTALL_TEST_FAIL_AFTER_SWAP = "1"
+          $failed = $false
+          try { & (Join-Path $unicodeRoot "install.ps1") } catch { $failed = $true }
+          $env:CHANGLI_INSTALL_TEST_FAIL_AFTER_SWAP = $null
+          if (-not $failed) { throw "Windows PowerShell rollback simulation unexpectedly succeeded" }
+          if (-not (Test-Path (Join-Path $env:CODEX_HOME "pets\changli\obsolete.txt"))) { throw "Windows PowerShell rollback lost the previous package" }
+          $expected = (Get-Content -Raw -Encoding UTF8 (Join-Path $unicodeRoot "pet\changli\checksums.json") | ConvertFrom-Json).files.'spritesheet.webp'
+          $installed = (Get-FileHash (Join-Path $env:CODEX_HOME "pets\changli\spritesheet.webp") -Algorithm SHA256).Hash
+          if ($expected -ne $installed) { throw "Windows PowerShell install hash mismatch" }
+          & (Join-Path $unicodeRoot "install.ps1") -SkipBackup
