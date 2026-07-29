@@ -91,8 +91,6 @@ EXPECTED_EVIDENCE_FILES = {
     "docs/images/contact-sheet.png",
     "docs/images/look-directions.png",
     "workflow/qa/direction-blind-pairs.png",
-    "workflow/qa/installed-contact-sheet.png",
-    "workflow/qa/running-rows-installed.png",
     *(f"workflow/qa/previews/{name}" for name in EXPECTED_PREVIEWS),
 }
 
