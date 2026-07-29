@@ -8,6 +8,8 @@
 - [ ] 透明像素隐藏 RGB 为 0，绿色键边缘污染为 0。
 - [ ] `running-right` 八帧是 `running-left` 同序帧的精确水平镜像。
 - [ ] `workflow/pet_request.json` 中的发布 SHA-256 已更新。
+- [ ] `pet/changli/checksums.json` 与 `pet.json`、图集当前 SHA-256 一致。
+- [ ] `workflow/qa/release-evidence.json` 绑定当前图集和全部发布 QA 媒体；联系表与 Look 图可由当前图集逐格重算。
 
 ## 视觉 QA
 
@@ -22,6 +24,9 @@
 
 - [ ] `python workflow/tools/validate_release.py` 通过。
 - [ ] Windows 隔离安装测试通过，重复安装保持幂等。
+- [ ] 模拟交换后失败能够恢复旧包；损坏源与并发安装会被拒绝。
+- [ ] 模拟恢复本身失败时，rollback 旧包仍保留，错误消息包含保存路径。
+- [ ] Windows PowerShell 5.1 在中文和空格路径下安装通过。
 - [ ] GitHub Actions 的 `Validate release` 与 `Test Windows installer` 通过。
 - [ ] 仓库包和实际安装包 SHA-256 一致。
 
@@ -31,3 +36,9 @@
 - [ ] CHANGELOG 记录改动和保留警告。
 - [ ] NOTICE 和版权归属声明仍然完整。
 - [ ] 通过 PR 合并到受保护的 `main`。
+
+## 未发布候选
+
+- [ ] `candidate_resume_doctor.py --expect-next ...` 通过并生成 checkpoint。
+- [ ] checkpoint 中下一任务、输入角色、尺寸与 SHA-256 完整。
+- [ ] 候选没有越过未完成依赖，也没有把 8×9 中间图集当成可安装版本。

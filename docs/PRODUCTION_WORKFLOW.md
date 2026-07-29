@@ -27,6 +27,34 @@
 - 如果本机代理导致 TLS 握手超时，先做不带密钥的直连探测。仅在单次 CLI 子进程内清空代理变量，不修改系统代理；确认网络后再发正式请求。
 - CLI、内置通道或素材额度阻塞时，保留完整恢复点并停止在依赖边界；禁止用单格拼补、仿射旋转或程序变形伪造完整 Look 行。
 
+## 候选恢复体检
+
+候选目录可以位于任意盘符。恢复前使用 bundled Python 运行只读 doctor：
+
+```powershell
+python .\workflow\tools\candidate_resume_doctor.py `
+  --run-dir 'D:\Codex桌宠\changli-v1.1-candidate' `
+  --json-out 'D:\Codex桌宠\changli-v1.1-candidate\qa\candidate-checkpoint.json' `
+  --expect-next look-row-9
+```
+
+报告只记录候选内相对路径、下一可执行任务、提示词和参考图角色、尺寸及 SHA-256；不会复制、生成、去色或修改图集。换盘符或用户名后重新运行即可重建 checkpoint。任何外部路径、非标准依赖边、缺失输入、错误行尺寸、错误四基准顺序或超过当前参考图限制都会阻止继续。
+
+`look-row-10` 只有在 row 9 的注册图、注册比例、最终格边缘报告、八方向语义报告和连续性报告全部通过后才会解锁；仅把 `imagegen-jobs.json` 的 row 9 改成 complete 不足以跨越此门禁。
+
+## 确定性工具安全规则
+
+- `normalize_standard_scale.py` 默认使用 `--output-root` 事务写入新帧。它会先预检整批素材；原地模式必须传入工作区外的 `--backup-root`，写入失败会从不可变备份恢复整批源帧。
+- `mirror_running_left_to_right.py` 默认要求 `--output`。原地修复必须同时提供 `--in-place --backup`，并建议使用 `--expected-source-sha256` 锁定输入。
+- 两个工具都拒绝越界、错误尺寸、错误源哈希和隐式覆盖，并写 before/after 哈希报告。
+
+## Codex 运行时需求边界
+
+- 官方 Pets 文档定义了 Running、Needs input、Ready、Blocked 四种活动状态，并说明选择宠物只改变外观，不改变任务执行方式：<https://learn.chatgpt.com/docs/pets?surface=app>。
+- 官方文档目前只明确说明 macOS 的 Computer Use 画中画窗口可以附着到已唤醒的宠物；没有承诺 Windows、普通鼠标或内置浏览器光标会驱动 16 个 Look 帧。
+- 官方 Computer Use 文档说明 Windows 在活动桌面前台运行并会移动指针：<https://learn.chatgpt.com/docs/computer-use>。这不等同于桌宠内部 Look 事件契约。
+- 因此素材验收与运行时触发验收必须分开：16 帧可以通过图集 QA，但是否播放属于 Codex 应用运行时测试，不能靠增加 sprites 或改 `pet.json` 推断成功。
+
 ## 本次长离修复
 
 - 以已完成右跑镜像修复的 v2 图集作为输入，不改变帧数、Alpha、单元格位置或动作顺序。

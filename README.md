@@ -79,7 +79,7 @@ Codex Pets 会根据聊天任务状态切换动画，例如任务处理中、等
    powershell -ExecutionPolicy Bypass -File .\install.ps1
    ```
 
-   安装器会验证 manifest 与复制后的 SHA-256。升级旧版本时，默认把原包备份到 `%CODEX_HOME%\pet-backups`；自动化或不需要备份时可传入 `-SkipBackup`。
+   安装器会按受版本控制的校验清单验证 manifest、WebP 文件头与 SHA-256，并使用独占锁和目录交换完成事务安装。升级旧版本时，默认把整个旧包备份到 `%CODEX_HOME%\pet-backups`；交换失败会自动回滚。自动化或不需要备份时可传入 `-SkipBackup`。
 
 3. 打开 Codex / ChatGPT 桌面应用：
 
@@ -120,6 +120,7 @@ Remove-Item -LiteralPath "$HOME\.codex\pets\changli" -Recurse
 .
 ├── pet/
 │   └── changli/
+│       ├── checksums.json           # 安装前发布文件校验清单
 │       ├── pet.json                 # Codex Pet manifest
 │       └── spritesheet.webp         # 可安装的最终 v2 图集
 ├── docs/
@@ -132,10 +133,12 @@ Remove-Item -LiteralPath "$HOME\.codex\pets\changli" -Recurse
 ├── workflow/
 │   ├── prompts/                     # 基准、标准动作、视线与重试提示词
 │   ├── layout-guides/               # 各动画行的槽位布局参考
-│   ├── qa/                          # 结构、透明度、逐行动画、盲测与方向检查结果
+│   ├── qa/                          # 结构、透明度、逐行动画、盲测、方向检查及证据哈希
 │   └── tools/
+│       ├── candidate_resume_doctor.py # 候选恢复与依赖只读体检
+│       ├── mirror_running_left_to_right.py
 │       ├── normalize_standard_scale.py
-│       └── validate_release.py       # 自包含发布校验
+│       └── validate_release.py        # 自包含发布校验
 ├── .github/workflows/               # GitHub Actions 发布检查
 ├── CONTRIBUTING.md
 ├── requirements-dev.txt
@@ -308,7 +311,7 @@ python -m pip install -r requirements-dev.txt
 python workflow/tools/validate_release.py
 ```
 
-该命令会同时检查 manifest、图集尺寸与透明度、74 个非空单元格（73 帧动画/方向 + neutral）、未使用格、绿色边缘、左右跑精确镜像、发布哈希以及保留的 QA 门槛。GitHub Actions 会在每个 PR 中运行同一套检查，并在 Windows 上测试安装脚本。
+该命令会检查校验清单、manifest、图集尺寸与透明度、74 个非空单元格（73 帧动画/方向 + neutral）、未使用格、实际修复色键、左右跑精确镜像、发布哈希，并重新计算盲测与方向证据。GitHub Actions 还会运行负例单元测试、事务回滚、损坏源拒绝、并发锁，以及 Windows PowerShell 5.1 中文路径安装测试。
 
 ## 自己制作其他角色
 

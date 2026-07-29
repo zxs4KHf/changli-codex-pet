@@ -60,6 +60,8 @@
 
 v1.1 已完成标准行动作 A/B、Look 机制和四基准方向，但完整 row 9 受图像模型冷却与无效 CLI 凭据阻塞。稳定版未被替换。继续开发前先阅读 `docs/V1.1_CANDIDATE_STATUS.md`，不要重做已拒绝的标准动作，也不要单格拼补 Look。
 
+候选恢复必须先运行 `workflow/tools/candidate_resume_doctor.py`；当前预期唯一下一任务为 `look-row-9`。doctor 是只读的，不会生成或修改素材。
+
 ## 发布前复核命令
 
 使用 Codex bundled Python：

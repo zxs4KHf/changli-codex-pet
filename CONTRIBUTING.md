@@ -16,6 +16,7 @@
 
 ```powershell
 python -m pip install -r requirements-dev.txt
+python -m unittest discover -s tests -v
 python workflow/tools/validate_release.py
 ```
 
@@ -26,6 +27,6 @@ $env:CODEX_HOME = Join-Path $env:TEMP "changli-codex-test"
 .\install.ps1 -SkipBackup
 ```
 
-提交的 PR 必须通过 GitHub Actions 中的 `Validate release` 与 `Test Windows installer`。
+提交的 PR 必须通过 GitHub Actions 中的 `Validate release` 与 `Test Windows installer`；新增的 Windows PowerShell 5.1 兼容性检查也必须通过。
 
 完整视觉制作和返修规则见 [docs/PRODUCTION_WORKFLOW.md](docs/PRODUCTION_WORKFLOW.md)。
